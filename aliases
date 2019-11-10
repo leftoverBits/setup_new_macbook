@@ -1,0 +1,2 @@
+alias hgrep='history | fzf'
+alias onprod="cat .kubernetes/gcp/production/kustomization.yaml | grep newTag"

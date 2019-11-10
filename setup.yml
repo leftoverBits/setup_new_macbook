@@ -1,0 +1,22 @@
+- name: install zsh
+  homebrew:
+    name: zsh
+    state: latest
+- name: clone oh-my-zsh
+  git:
+    repo='https://github.com/robbyrussell/oh-my-zsh'
+    dest=~/.oh-my-zsh
+  when: installation|success
+  register: cloning
+  sudo: no
+- name: create zshfile
+  copy:
+    src=~/.oh-my-zsh/templates/zshrc.zsh-template
+    dest=~/.zshrc
+  when: cloning|success
+  sudo: no
+#- name: add aliases
+#  lineinfile:
+#    path: ~/.zshrc
+#    state: present
+#    regexp: 
