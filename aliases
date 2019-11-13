@@ -4,3 +4,5 @@ alias hgrep='history | fzf'
 alias gs="git status"
 alias gd="git diff"
 alias gb="git branch"
+alias gm="git merge"
+alias gmf="git merge --no-ff"
