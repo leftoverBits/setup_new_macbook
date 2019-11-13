@@ -1,2 +1,7 @@
 alias hgrep='history | fzf'
 alias onprod="cat .kubernetes/gcp/production/kustomization.yaml | grep newTag"
+
+# GIT ALIASES
+alias gs=git status
+alias gd=git diff
+alias gb=git branch
